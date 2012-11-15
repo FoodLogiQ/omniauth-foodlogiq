@@ -7,29 +7,24 @@ module OmniAuth
 
       option :client_options, {
         :site => 'http://localhost:3000',
-        :authorize_url => 'http://localhost:3000/oauth/authorize',
-        :token_url => 'http://localhost:3000/oauth/access_token'
+        :authorize_path => '/oauth/authorize',
+        :token_path => '/oauth/access_token'
       }
 
-      def request_phase
-        super
+      uid do 
+        raw_info['id'].to_s
       end
-
-      uid { raw_info['id'].to_s }
 
       info do
         {
           'email' => raw_info['email'],
-          'name' => raw_info['name']
+          'first_name' => raw_info['first_name'],
+          'last_name' => raw_info['last_name']
         }
       end
 
-      extra do
-        {:raw_info => raw_info}
-      end
-
       def raw_info
-        @raw_info ||= access_token.get('/user').parsed
+        @raw_info ||= access_token.get('/api/user').parsed
       end
     end
   end
