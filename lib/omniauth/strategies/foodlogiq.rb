@@ -12,7 +12,7 @@ module OmniAuth
       }
 
       uid do 
-        raw_info['id'].to_s
+        raw_info['email']
       end
 
       info do
