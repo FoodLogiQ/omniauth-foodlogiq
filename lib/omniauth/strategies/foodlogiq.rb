@@ -6,7 +6,7 @@ module OmniAuth
       option :name, "foodlogiq"
 
       option :client_options, {
-        :site => 'http://localhost:3000',
+        :site => ENV['FOODLOGIQ_SITE'],
         :authorize_path => '/oauth/authorize',
         :token_path => '/oauth/access_token'
       }
