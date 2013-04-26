@@ -8,7 +8,7 @@ module OmniAuth
       option :client_options, {
         :site => ENV['FOODLOGIQ_SITE'],
         :authorize_path => '/oauth/authorize',
-        :token_path => '/oauth/access_token'
+        :token_url => '/oauth/access_token'
       }
 
       uid do 
