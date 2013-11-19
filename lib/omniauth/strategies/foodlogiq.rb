@@ -6,7 +6,7 @@ module OmniAuth
       option :name, "foodlogiq"
 
       option :client_options, {
-        :site => ENV['FOODLOGIQ_SITE'] || ENV['FOODLOGIQ_ID_SITE'],
+        :site => ENV['FOODLOGIQ_ID_SITE'] || ENV['FOODLOGIQ_SITE'],
         :authorize_path => '/oauth/authorize',
         :token_url => '/oauth/access_token'
       }
@@ -31,7 +31,7 @@ module OmniAuth
       option :name, "foodlogiqRegister"
 
       option :client_options, {
-        :site => ENV['FOODLOGIQ_SITE'] || ENV['FOODLOGIQ_ID_SITE'],
+        :site => ENV['FOODLOGIQ_ID_SITE'] || ENV['FOODLOGIQ_SITE'],
         :authorize_path => '/oauth/authorize',
         :token_url => '/oauth/access_token',
         :register => true
