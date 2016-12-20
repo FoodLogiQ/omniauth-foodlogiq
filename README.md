@@ -13,4 +13,4 @@ on the [FoodLogiQ Applications Page](https://www.foodlogiq.com).
 
 ## License
 
-TODO: Include more information here about the license.
+TODO: Include more information here about the license...
