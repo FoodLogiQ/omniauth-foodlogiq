@@ -11,7 +11,7 @@ module OmniAuth
         :token_url => '/oauth/access_token'
       }
 
-      uid do 
+      uid do
         raw_info['email']
       end
 
@@ -37,7 +37,9 @@ module OmniAuth
         :register => true
       }
 
-      uid do 
+      option :authorize_options, { Register: true }
+
+      uid do
         raw_info['email']
       end
 
